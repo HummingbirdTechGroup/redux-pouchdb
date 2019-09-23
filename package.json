@@ -10,7 +10,7 @@
     "build": "npm-run-all --serial build:**",
     "build:commonjs": "cross-env BABEL_ENV=commonjs babel src --out-dir dist/lib",
     "build:es": "cross-env BABEL_ENV=es babel src --out-dir dist/es",
-    "prepublish": "npm-run-all --serial clean build",
+    "prepare": "npm-run-all --serial clean build",
     "test": "istanbul cover babel-tape-runner tests/*.js"
   },
   "files": [
@@ -20,7 +20,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/rahulraghavankklm/redux-pouchdb"
+    "url": "https://github.com/HummingbirdTechGroup/redux-pouchdb/tree/v0"
   },
   "keywords": [
     "redux",
@@ -30,9 +30,9 @@
   "author": "Vicente de Alencar",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/vicentedealencar/redux-pouchdb/issues"
+    "url": "https://github.com/HummingbirdTechGroup/redux-pouchdb/issues"
   },
-  "homepage": "https://github.com/vicentedealencar/redux-pouchdb",
+  "homepage": "https://github.com/HummingbirdTechGroup/redux-pouchdb",
   "dependencies": {
     "array.from": "^1.0.3",
     "deep-equal": "^1.0.1"

@@ -1,4 +1,3 @@
-import equal from 'deep-equal';
 import 'array.from';
 import save from './save';
 
@@ -78,7 +77,7 @@ export const persistentReducer = (reducer, name) => {
     }
 
     const reducedState = reducer(state, action);
-    if (isInitialized && !equal(reducedState,lastState)) {
+    if (isInitialized && reducedState !== lastState) {
       lastState = reducedState;
       saveReducer(name, reducedState);
     }
